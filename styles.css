@@ -49,6 +49,10 @@ main {
 
 section {
   margin-bottom: 3rem;
+  border: 2px solid #ddd; /* 枠線を追加 */
+  padding: 1.5rem; /* 内側に余白を追加 */
+  border-radius: 8px; /* 角を丸く */
+  background-color: white;
 }
 
 h2 {
