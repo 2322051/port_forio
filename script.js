@@ -30,9 +30,9 @@ const projects = {
     link: 'https://github.com/your-github/project2'
   },
   project6: {
-    title: 'Lum!na',
-    img: 'images/resource_manegiment.png',
-    desc: '時間割の作成・共有、掲示板での情報交換、図書館や教室の空き状況確認、友達の位置共有、参考書の売買など、学生生活の“困った”を一つで解決できるプラットフォーム。',
+    title: 'ResourceHub',
+    img: 'images/スクリーンショット 2025-05-17 3.09.28.png',
+    desc: 'このアプリは、あらゆるリソースを登録・編集・削除して用途や数、ステータスを簡単に管理できるほか、リソースごとの在庫や利用状況を分かりやすく可視化し、モダンで直感的な操作画面とSQLiteによる安全かつ高速なデータベース連携で、誰でも迷わず効率的に利用できるよう設計されています。さらに、リソースの利用状況をグラフで表示することで、視覚的に把握しやすくなっています。',
     link: 'https://github.com/your-github/project2'
   },
 };
