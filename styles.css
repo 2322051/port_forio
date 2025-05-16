@@ -1,127 +1,77 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-  padding: 0 10px;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-header nav ul {
+/* --- 既存のstyles.cssの末尾に追記 or 差し替え用サンプル --- */
+.profile {
   display: flex;
-  justify-content: center;
-  list-style-type: none;
-  padding: 0;
-}
-
-header nav ul li {
-  margin: 0 15px;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-header nav ul li a:hover {
-  text-decoration: underline;
-}
-
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-section {
-  margin-bottom: 3rem;
-  border: 2px solid #ddd; /* 枠線を追加 */
-  padding: 1.5rem; /* 内側に余白を追加 */
-  border-radius: 8px; /* 角を丸く */
-  background-color: white;
-}
-
-h2 {
-  color: #2c3e50;
-  margin-bottom: 1rem;
-}
-
-ul {
-  list-style-type: none;
-}
-
-ul li {
-  margin-bottom: 1rem;
-}
-
-.project-title {
-  color: #2980b9;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-.project-title:hover {
-  text-decoration: underline;
-}
-
-/* モーダルウィンドウ */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 背景を暗く */
-  justify-content: center;
   align-items: center;
+  gap: 20px;
+  padding: 2rem 1rem 1rem 1rem;
+}
+.profile-img {
+  width: 80px; height: 80px; border-radius: 50%; border: 3px solid #2c3e50;
+  object-fit: cover;
+}
+.tagline {
+  font-size: 1rem;
+  color: #2980b9;
+  margin-top: .3rem;
 }
 
-.modal-content {
-  position: relative;
-  background-color: white;
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(44,62,80,.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: none;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.skill {
+  background: #f0f8ff;
+  padding: .8rem 1.2rem;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(52,152,219,.07);
 }
 
-.close {
-  color: #aaa;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 28px;
-  font-weight: bold;
+.timeline { border-left: 4px solid #2980b9; margin: 2rem 0; padding-left: 1rem; }
+.timeline-item { margin-bottom: 1.6rem; position: relative; }
+.timeline-date {
+  font-size: .9rem; color: #2980b9;
+  background: #e3ecfa; padding: .2rem .8rem; border-radius: 8px; display: inline-block; margin-bottom: .3rem;
+}
+.timeline-item::before {
+  content: ""; position: absolute; left: -14px; top: 7px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #fff; border: 3px solid #2980b9;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+.project-card {
+  background: #f6fafd;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(52,152,219,.07);
+  padding: 1.1rem;
   cursor: pointer;
+  display: flex; flex-direction: column; align-items: center;
+  transition: transform .16s;
 }
+.project-card:hover { transform: translateY(-4px) scale(1.04); }
+.project-thumb { width: 100%; max-width: 180px; border-radius: 8px; margin-bottom: 1rem; }
+.project-tags { font-size: .9rem; color: #2980b9; margin-top: .3rem; display: block; }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+@media (max-width: 700px) {
+  .profile { flex-direction: column; gap: 10px; text-align: center;}
+  main { padding: 1rem; }
+  .skills-grid, .projects-grid { flex-direction: column; gap: 12px; }
 }

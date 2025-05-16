@@ -1,46 +1,29 @@
-
-// モーダルウィンドウを表示
-const projectTitles = document.querySelectorAll('.project-title');
-const modal = document.getElementById('project-modal');
-const closeModal = document.querySelector('.close');
-const modalTitle = document.getElementById('modal-title');
-const modalDescription = document.getElementById('modal-description');
-const modalLink = document.getElementById('modal-link');
-
-// プロジェクトのデータ
-const projectData = {
+const projects = {
   project1: {
-    title: 'プロジェクト名1',
-    description: 'プロジェクト1の詳細説明。',
-    link: 'https://example.com/project1'
+    title: 'AIチャットボット開発',
+    img: 'project1.jpg',
+    desc: 'OpenAI APIとReactを活用した自動応答サービス。会話ログの可視化やFAQ管理も実装。',
+    link: 'https://github.com/your-github/project1'
   },
   project2: {
-    title: 'プロジェクト名2',
-    description: 'プロジェクト2の詳細説明。',
-    link: 'https://example.com/project2'
+    title: 'IoTデータ可視化',
+    img: 'project2.jpg',
+    desc: '複数センサーのリアルタイムデータをWebで可視化。AWSサーバレス構成。',
+    link: 'https://github.com/your-github/project2'
   }
 };
-
-// プロジェクトタイトルがクリックされたとき
-projectTitles.forEach(title => {
-  title.addEventListener('click', (e) => {
-    const projectId = e.target.getAttribute('data-project');
-    const project = projectData[projectId];
-    modalTitle.textContent = project.title;
-    modalDescription.textContent = project.description;
-    modalLink.href = project.link;
-    modal.style.display = 'block'; // モーダルを表示
-  });
-});
-
-// モーダルを閉じる
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-// モーダル外をクリックしても閉じる
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
-});
+function openModal(key) {
+  document.getElementById('modal-title').textContent = projects[key].title;
+  document.getElementById('modal-img').src = projects[key].img;
+  document.getElementById('modal-description').textContent = projects[key].desc;
+  document.getElementById('modal-link').href = projects[key].link;
+  document.getElementById('project-modal').style.display = 'flex';
+}
+function closeModal() {
+  document.getElementById('project-modal').style.display = 'none';
+}
+// モーダル外クリックや×クリックも対応
+document.querySelector('.close').onclick = closeModal;
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) closeModal();
+};
