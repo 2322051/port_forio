@@ -24,9 +24,9 @@ const projects = {
     link: 'https://github.com/your-github/project2'
   },
   project5: {
-    title: 'Lum!na',
+    title: 'ConnectBiz',
     img: 'images/tyuusyoukigyou.png',
-    desc: '時間割の作成・共有、掲示板での情報交換、図書館や教室の空き状況確認、友達の位置共有、参考書の売買など、学生生活の“困った”を一つで解決できるプラットフォーム。',
+    desc: 'このサービスは、企業や個人が自分の情報を登録できるユーザー認証機能や、提携状況・メッセージ・マッチング情報を一括管理できるマイページ、希望条件や業種、スキルでパートナーを効率的に検索・管理できるデータ管理機能、さらに、企業や個人の情報をもとに最適なマッチングを提案する機能を備えています。これにより、企業は新たなビジネスパートナーを見つけやすくなり、個人は自分のスキルや希望条件に合った企業と出会うことができます。',
     link: 'https://github.com/your-github/project2'
   },
   project6: {
