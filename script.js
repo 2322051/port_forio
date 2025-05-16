@@ -12,18 +12,24 @@ const projects = {
     link: 'https://github.com/your-github/project2'
   }
 };
-function openModal(key) {
-  document.getElementById('modal-title').textContent = projects[key].title;
-  document.getElementById('modal-img').src = projects[key].img;
-  document.getElementById('modal-description').textContent = projects[key].desc;
-  document.getElementById('modal-link').href = projects[key].link;
-  document.getElementById('project-modal').style.display = 'flex';
-}
-function closeModal() {
-  document.getElementById('project-modal').style.display = 'none';
-}
-// モーダル外クリックや×クリックも対応
-document.querySelector('.close').onclick = closeModal;
+
+// カードクリックでモーダル表示
+document.querySelectorAll('.project-card').forEach(card => {
+  card.onclick = function() {
+    const key = this.dataset.key;
+    const p = projects[key];
+    document.getElementById('modal-title').textContent = p.title;
+    document.getElementById('modal-img').src = p.img;
+    document.getElementById('modal-description').textContent = p.desc;
+    document.getElementById('modal-link').href = p.link;
+    document.getElementById('project-modal').style.display = 'flex';
+  }
+});
+// 閉じる動作
+document.getElementById('close-modal').onclick = closeModal;
 window.onclick = function(event) {
   if (event.target.classList.contains('modal')) closeModal();
 };
+function closeModal() {
+  document.getElementById('project-modal').style.display = 'none';
+}

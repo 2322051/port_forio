@@ -28,8 +28,7 @@
   </header>
 
   <main>
-    <!-- 自己紹介 -->
-    <section id="about" class="card">
+    <section id="about" class="card gradient-bg">
       <h2><i class="fa-solid fa-user"></i> 自己紹介</h2>
       <p>
         こんにちは！<b>長谷川拓音</b>です。フロントエンド・バックエンド両方の開発経験があり、
@@ -42,7 +41,6 @@
       </ul>
     </section>
 
-    <!-- スキル -->
     <section id="skills" class="card">
       <h2><i class="fa-solid fa-laptop-code"></i> スキル</h2>
       <div class="skills-grid">
@@ -57,8 +55,7 @@
       </div>
     </section>
 
-    <!-- 経歴 -->
-    <section id="experience" class="card">
+    <section id="experience" class="card section-alt">
       <h2><i class="fa-solid fa-briefcase"></i> 経歴</h2>
       <div class="timeline">
         <div class="timeline-item">
@@ -78,11 +75,10 @@
       </div>
     </section>
 
-    <!-- プロジェクト -->
     <section id="projects" class="card">
       <h2><i class="fa-solid fa-flask"></i> 研究・開発プロジェクト</h2>
       <div class="projects-grid">
-        <div class="project-card" onclick="openModal('project1')">
+        <div class="project-card" data-key="project1">
           <img src="project1.jpg" alt="プロジェクト1" class="project-thumb">
           <div>
             <h3>AIチャットボット開発</h3>
@@ -90,7 +86,7 @@
             <span class="project-tags">React / Node.js / API</span>
           </div>
         </div>
-        <div class="project-card" onclick="openModal('project2')">
+        <div class="project-card" data-key="project2">
           <img src="project2.jpg" alt="プロジェクト2" class="project-thumb">
           <div>
             <h3>IoTデータ可視化</h3>
@@ -101,8 +97,7 @@
       </div>
     </section>
 
-    <!-- 連絡先 -->
-    <section id="contact" class="card">
+    <section id="contact" class="card section-alt">
       <h2><i class="fa-solid fa-envelope"></i> 連絡先</h2>
       <p>Email: <a href="mailto:xxxxxx@example.com">xxxxxx@example.com</a></p>
       <p>GitHub: <a href="https://github.com/your-github" target="_blank">your-github</a></p>
@@ -110,14 +105,13 @@
     </section>
   </main>
 
-  <!-- プロジェクト詳細モーダル -->
   <div id="project-modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content animate-modal">
+      <span class="close" id="close-modal">&times;</span>
       <h2 id="modal-title"></h2>
       <img id="modal-img" src="" alt="" class="modal-thumb">
       <p id="modal-description"></p>
-      <a id="modal-link" href="#" target="_blank">GitHubで詳しく見る</a>
+      <a id="modal-link" href="#" target="_blank" class="modal-link">GitHubで詳しく見る</a>
     </div>
   </div>
 
