@@ -3,7 +3,7 @@ const projects = {
     title: 'グループ内お金管理アプリ',
     img: 'images/money.png',
     desc: 'グループでのお金のやり取りを見える化し、記録・精算できるアプリ',
-    link: ''
+    link: ' '
   },
   project2: {
     title: 'Lum!na',
