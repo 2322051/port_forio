@@ -1,207 +1,571 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Takuto Hasegawa | エンジニアポートフォリオ</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="長谷川拓音のポートフォリオ。武蔵野大学データサイエンス学部でWebアプリとLLMを触りつつ、日本酒で一息つく学生エンジニアです。" />
+  <title>長谷川拓音 / Takuto Hasegawa — 学生エンジニアのポートフォリオ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Yomogi&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&family=Kalam:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="profile">
-      <img src="images/IMG_6062.JPG" alt="Takuto Hasegawa" class="profile-img">
-      <div>
-        <h1>長谷川 拓音</h1>
-        <p class="tagline">バックエンド / フロントエンド / webアプリケーションエンジニア</p>
-      </div>
-    </div>
-    <nav>
+
+  <!-- Decorative seigaiha waves pattern -->
+  <div class="seigaiha" aria-hidden="true"></div>
+
+  <!-- Big 酒 watermark kanji -->
+  <div class="sake-mark" aria-hidden="true">酒</div>
+
+  <header class="site-nav">
+    <a class="logo" href="#top" aria-label="長谷川拓音 — ホーム">
+      <svg class="logo-icon" viewBox="0 0 40 60" aria-hidden="true">
+        <path d="M16 4 h8 v4 h-8z M15 8 h10 M18 8 v8 c0 1 -0.6 1.8 -1.5 2.3 C10 22 6 30 6 40 c0 10 7 16 14 16 c7 0 14 -6 14 -16 c0 -10 -4 -18 -10.5 -21.7 C22.6 17.8 22 17 22 16 v-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <ellipse cx="20" cy="44" rx="8" ry="2" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" opacity="0.6"/>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-jp">長谷川 拓音</span>
+        <span class="logo-en">Takuto Hasegawa</span>
+      </span>
+    </a>
+
+    <nav aria-label="Primary">
       <ul>
         <li><a href="#about">自己紹介</a></li>
-        <li><a href="#skills">スキル</a></li>
-        <li><a href="#experience">経歴</a></li>
-        <li><a href="#projects">プロジェクト</a></li>
-        <li><a href="#contact">github</a></li>
+        <li><a href="#work">作品</a></li>
+        <li><a href="#skills">技術</a></li>
+        <li><a href="#log">活動ログ</a></li>
+        <li><a href="#contact">ご挨拶</a></li>
       </ul>
     </nav>
+
+    <a class="nav-cta" href="https://github.com/2322051" target="_blank" rel="noopener">
+      GitHub <span aria-hidden="true">→</span>
+    </a>
   </header>
 
-  <main>
-    <section id="about" class="card gradient-bg">
-      <h2><i class="fa-solid fa-user"></i> 自己紹介</h2>
-      <p>
-        誕生日：2004年5月3日生まれ
-        <br>
-        所属：武蔵野大学データサイエンス学部
-        <br>
-        LLMを実装したWebアプリケーションの開発など
-        <br>
-        バックエンド・フロントエンドの両方でwebアプリケーション開発に興味があります。
-        <br>
-        所属ゼミ:渡邉ゼミ
-        <br>
-        スキルギャップレーダーというwebアプリケーションを開発し、効率的な人材運用を目指しています。
+  <main id="top">
+
+    <!-- ========================= HERO ========================= -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-greeting">
+            <span class="hand">はじめまして、</span>
+            <span class="hand-sub">ようこそお越しくださいました。</span>
+          </p>
+
+          <h1 class="hero-name">
+            <span class="name-jp">長谷川 拓音</span>
+            <span class="name-en"><em>Takuto</em> Hasegawa.</span>
+          </h1>
+
+          <p class="hero-tagline">
+            武蔵野大学<strong>データサイエンス学部</strong>の 3 年生です。バックエンドもフロントエンドも、<strong>LLM</strong> もちょっと触る学生エンジニアで、息抜きは<strong>日本酒</strong>をちびちびやること。
+          </p>
+
+          <div class="hero-facts">
+            <div>
+              <span class="k">生年月日</span>
+              <span class="v">2004.05.03</span>
+            </div>
+            <div>
+              <span class="k">所属</span>
+              <span class="v">武蔵野大学 / 渡邉ゼミ</span>
+            </div>
+            <div>
+              <span class="k">専門</span>
+              <span class="v">Web / LLM / AI プロダクト</span>
+            </div>
+            <div>
+              <span class="k">好きな酒</span>
+              <span class="v">純米吟醸・ぬる燗派</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-art">
+          <div class="portrait">
+            <img src="images/IMG_6062.JPG" alt="長谷川拓音" />
+            <span class="hanko" aria-hidden="true">拓</span>
+          </div>
+
+          <!-- Sake bottle (徳利) illustration -->
+          <svg class="tokkuri" viewBox="0 0 200 320" aria-hidden="true">
+            <defs>
+              <radialGradient id="bottleBody" cx="35%" cy="40%" r="80%">
+                <stop offset="0" stop-color="#3A4A6E" />
+                <stop offset="0.55" stop-color="#1F2A4A" />
+                <stop offset="1" stop-color="#10182E" />
+              </radialGradient>
+              <linearGradient id="labelPaper" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#F8F2E4" />
+                <stop offset="1" stop-color="#E8DEC3" />
+              </linearGradient>
+              <linearGradient id="corkGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#D9A15E" />
+                <stop offset="1" stop-color="#8E5B22" />
+              </linearGradient>
+            </defs>
+
+            <!-- soft shadow below -->
+            <ellipse cx="100" cy="307" rx="54" ry="5" fill="#1F2A4A" opacity="0.18" />
+
+            <!-- bottle silhouette (flat base, stands upright) -->
+            <path d="
+              M 88 12
+              L 88 26
+              Q 82 30 82 40
+              L 82 74
+              Q 82 82 78 86
+              Q 46 110 38 160
+              Q 30 215 42 258
+              L 42 296
+              L 158 296
+              L 158 258
+              Q 170 215 162 160
+              Q 154 110 122 86
+              Q 118 82 118 74
+              L 118 40
+              Q 118 30 112 26
+              L 112 12
+              Z"
+              fill="url(#bottleBody)"
+              stroke="#0A1326"
+              stroke-width="1.2"
+              stroke-linejoin="round"
+            />
+            <!-- foot rim (subtle shadow at base) -->
+            <rect x="42" y="290" width="116" height="6" fill="#0A1326" opacity="0.5" />
+
+            <!-- subtle left highlight (reflection) -->
+            <path d="M 58 130 Q 48 180 54 234" stroke="#9BADCF" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.28" />
+            <path d="M 64 110 Q 62 116 62 122" stroke="#CFD8E8" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.45" />
+
+            <!-- cork stopper -->
+            <rect x="88" y="4" width="24" height="10" fill="url(#corkGrad)" stroke="#5A3A12" stroke-width="0.8" rx="1.5" />
+            <ellipse cx="100" cy="4" rx="12" ry="2.5" fill="#E3B474" />
+
+            <!-- twine wrap at shoulder (3 loops) -->
+            <ellipse cx="100" cy="46" rx="20" ry="2.6" fill="#A26E34" stroke="#5A3A12" stroke-width="0.6" />
+            <ellipse cx="100" cy="52" rx="20.5" ry="2.6" fill="#A26E34" stroke="#5A3A12" stroke-width="0.6" />
+            <ellipse cx="100" cy="58" rx="20" ry="2.6" fill="#A26E34" stroke="#5A3A12" stroke-width="0.6" />
+
+            <!-- knot hanging -->
+            <path d="M 120 58 Q 128 70 124 82 Q 120 92 128 98" stroke="#5A3A12" stroke-width="1.4" fill="none" stroke-linecap="round" />
+            <circle cx="128" cy="100" r="2" fill="#A26E34" stroke="#5A3A12" stroke-width="0.6" />
+
+            <!-- washi label (with slightly organic top/bottom edge) -->
+            <path d="
+              M 50 184
+              Q 100 180 150 184
+              L 152 240
+              Q 100 246 48 240
+              Z"
+              fill="url(#labelPaper)"
+              stroke="#2A2420"
+              stroke-width="0.9"
+            />
+
+            <!-- label inner borders -->
+            <line x1="60" y1="194" x2="140" y2="194" stroke="#C68A42" stroke-width="0.7" />
+            <line x1="60" y1="232" x2="140" y2="232" stroke="#C68A42" stroke-width="0.7" />
+
+            <!-- 酒 kanji (brush-style) -->
+            <text x="92" y="224" text-anchor="middle" font-family="Shippori Mincho, serif" font-size="40" font-weight="800" fill="#10182E">酒</text>
+
+            <!-- brush accent below kanji -->
+            <path d="M 72 228 Q 92 232 112 228" stroke="#B13A2D" stroke-width="0.8" fill="none" opacity="0.5" />
+
+            <!-- hanko stamp (拓) -->
+            <circle cx="132" cy="216" r="11" fill="#F8F2E4" stroke="#B13A2D" stroke-width="1.8" />
+            <text x="132" y="220" text-anchor="middle" font-family="Shippori Mincho, serif" font-size="12" font-weight="800" fill="#B13A2D">拓</text>
+          </svg>
+
+          <svg class="ochoko" viewBox="0 0 120 90" aria-hidden="true">
+            <ellipse cx="60" cy="18" rx="44" ry="8" fill="#E8DEC8" stroke="#2A2420" stroke-width="1.5" />
+            <ellipse cx="60" cy="18" rx="36" ry="5" fill="#C68A42" opacity="0.6" />
+            <path d="M16 18 L30 72 Q60 84 90 72 L104 18" fill="#F5EFE1" stroke="#2A2420" stroke-width="1.5" stroke-linejoin="round" />
+            <circle cx="60" cy="30" r="2" fill="#2A2420" opacity="0.4" />
+            <circle cx="45" cy="32" r="1.5" fill="#2A2420" opacity="0.25" />
+            <circle cx="74" cy="28" r="1.8" fill="#2A2420" opacity="0.3" />
+          </svg>
+        </aside>
+      </div>
+
+      <p class="hero-scroll" aria-hidden="true">
+        <span>scroll</span>
+        <span class="scroll-line"></span>
       </p>
-      <ul class="about-list">
-        <li><b>大学生活で力を入れてきたこと:</b> Webアプリ開発,バックエンド開発、フロントエンド開発</li>
-        <li><b>興味領域:</b> LLM,バックエンド・フロントエンド開発,
-               <br>AI/機械学習を活用したサービス設計・開発</li>
-        <li><b>モットー:</b> 「迷ったら行動する」</li>
+    </section>
+
+    <!-- ========================= ABOUT ========================= -->
+    <section class="about" id="about">
+      <header class="section-head">
+        <span class="section-num">其の一</span>
+        <h2 class="section-title">
+          <span class="title-jp">自己紹介</span>
+          <span class="title-en">About <em>me</em></span>
+        </h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-main">
+          <p class="about-lead">
+            はじめまして、<strong>長谷川 拓音</strong> と申します。武蔵野大学データサイエンス学部で、データ分析と Web 開発をいったりきたりしている 3 年生です。
+          </p>
+          <p>
+            ふだんは渡邉ゼミで <strong>「スキルギャップレーダー」</strong> という、企業の人材運用を効率化するための Web アプリを作っています。バックエンドとフロントエンド両方を触るのが好きで、最近はそこに LLM を組み込んだプロダクトづくりに夢中です。
+          </p>
+          <p>
+            モットーは <em class="brush">「迷ったら、行動する。」</em>。コードが行き詰まったら、お猪口で一杯だけ頂きながら考えることにしています。
+          </p>
+        </div>
+
+        <ul class="about-cards">
+          <li>
+            <span class="card-no">01</span>
+            <h3>学業</h3>
+            <p>データサイエンス学部 3 年。渡邉ゼミ所属。</p>
+          </li>
+          <li>
+            <span class="card-no">02</span>
+            <h3>ものづくり</h3>
+            <p>Web アプリ・LLM 組込サービスを個人／チームで開発。</p>
+          </li>
+          <li>
+            <span class="card-no">03</span>
+            <h3>日本酒</h3>
+            <p>純米吟醸をぬる燗で。たまに冷やで、休日は燗で。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================= WORK ========================= -->
+    <section class="work" id="work">
+      <header class="section-head">
+        <span class="section-num">其の二</span>
+        <h2 class="section-title">
+          <span class="title-jp">作品</span>
+          <span class="title-en">Selected <em>work</em></span>
+        </h2>
+      </header>
+
+      <p class="work-intro">
+        個人・チームで開発した Web / モバイルアプリケーション 6 品書きです。タップ（クリック）で一品ずつご紹介します。
+      </p>
+
+      <ul class="work-menu">
+        <li class="work-item" data-key="lumina">
+          <div class="work-thumb">
+            <img src="images/lumina1.png" alt="Lum!na" />
+          </div>
+          <div class="work-body">
+            <div class="work-head">
+              <span class="work-no">— 一品目 / 01</span>
+              <span class="work-year">2024</span>
+            </div>
+            <h3 class="work-title">Lum!na <span class="work-reading">ルミナ</span></h3>
+            <p class="work-desc">新入生・在学生の大学生活を一つにまとめる、学生コミュニティ支援 Web サービス。</p>
+            <p class="work-tags">HTML · CSS · JS · Flask · SQLite</p>
+          </div>
+        </li>
+
+        <li class="work-item" data-key="hobit">
+          <div class="work-thumb">
+            <img src="images/hobit1.png" alt="Hobit" />
+          </div>
+          <div class="work-body">
+            <div class="work-head">
+              <span class="work-no">— 二品目 / 02</span>
+              <span class="work-year">2024</span>
+            </div>
+            <h3 class="work-title">Hobit <span class="work-reading">ホビット</span></h3>
+            <p class="work-desc">趣味でつながる iOS マッチングアプリ。AI 性格分析で仲間をレコメンド。</p>
+            <p class="work-tags">Swift · SwiftUI · Python · SQLite · OpenAI API</p>
+          </div>
+        </li>
+
+        <li class="work-item" data-key="money">
+          <div class="work-thumb">
+            <img src="images/money.png" alt="Group Wallet" />
+          </div>
+          <div class="work-body">
+            <div class="work-head">
+              <span class="work-no">— 三品目 / 03</span>
+              <span class="work-year">2024</span>
+            </div>
+            <h3 class="work-title">Group Wallet <span class="work-reading">グループウォレット</span></h3>
+            <p class="work-desc">グループ内のお金のやり取りを記録・精算できるモバイル × Web アプリ。</p>
+            <p class="work-tags">Swift · React · Ruby · AWS · Docker</p>
+          </div>
+        </li>
+
+        <li class="work-item" data-key="rapid">
+          <div class="work-thumb">
+            <img src="images/aimLab.png" alt="Rapid Clicks" />
+          </div>
+          <div class="work-body">
+            <div class="work-head">
+              <span class="work-no">— 四品目 / 04</span>
+              <span class="work-year">2024</span>
+            </div>
+            <h3 class="work-title">Rapid Clicks <span class="work-reading">ラピッドクリックス</span></h3>
+            <p class="work-desc">クリックするだけで誰でも楽しめるスコアゲーム。実績とランキングつき。</p>
+            <p class="work-tags">HTML · CSS · JS · PHP · MySQL</p>
+          </div>
+        </li>
+
+        <li class="work-item" data-key="connectbiz">
+          <div class="work-thumb">
+            <img src="images/tyuusyoukigyou.png" alt="ConnectBiz" />
+          </div>
+          <div class="work-body">
+            <div class="work-head">
+              <span class="work-no">— 五品目 / 05</span>
+              <span class="work-year">2025</span>
+            </div>
+            <h3 class="work-title">ConnectBiz <span class="work-reading">コネクトビズ</span></h3>
+            <p class="work-desc">中小企業をつなぐビジネスアライアンスプラットフォーム。</p>
+            <p class="work-tags">HTML · CSS · JavaScript</p>
+          </div>
+        </li>
+
+        <li class="work-item" data-key="resource">
+          <div class="work-thumb">
+            <img src="images/resource_manegiment.png" alt="ResourceHub" />
+          </div>
+          <div class="work-body">
+            <div class="work-head">
+              <span class="work-no">— 六品目 / 06</span>
+              <span class="work-year">2025</span>
+            </div>
+            <h3 class="work-title">ResourceHub <span class="work-reading">リソースハブ</span></h3>
+            <p class="work-desc">チーム・個人のためのシンプルなリソース管理・可視化 Web アプリ。</p>
+            <p class="work-tags">HTML · CSS · JS · SQLite</p>
+          </div>
+        </li>
       </ul>
     </section>
 
-    <section id="skills" class="card">
-  <h2><i class="fa-solid fa-laptop-code"></i> スキル</h2>
-  <div class="skills-grid">
-    <div class="skill"><i class="fa-brands fa-html5"></i> HTML5</div>
-    <div class="skill"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
-    <div class="skill"><i class="fa-brands fa-js-square"></i> JavaScript</div>
-    <div class="skill"><i class="fa-solid fa-database"></i> SQLite / MySQL</div>
-    <div class="skill"><i class="fa-brands fa-python"></i> Python</div>
-    <div class="skill"><i class="fa-brands fa-react"></i> React</div>
-    <div class="skill"><i class="fa-solid fa-flask"></i> Flask</div>
-    <div class="skill"><i class="fa-brands fa-react"></i> Next.js</div>
-    <div class="skill"><i class="fa-brands fa-git-alt"></i> GitHub</div>
-  </div>
-</section>
+    <!-- ========================= SKILLS ========================= -->
+    <section class="skills" id="skills">
+      <header class="section-head">
+        <span class="section-num">其の三</span>
+        <h2 class="section-title">
+          <span class="title-jp">技術</span>
+          <span class="title-en">Stack &amp; <em>ingredients</em></span>
+        </h2>
+      </header>
 
+      <p class="skills-intro">
+        仕込みに使う素材たち。基本的なものから、最近はじめたものまで。
+      </p>
 
-    <!-- 職歴セクション -->
-<section id="experience" class="card section-alt">
-  <h2><i class="fa-solid fa-briefcase"></i> 職歴</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <span class="timeline-date">2023/3 - 2023/8</span>
-      <div>
-        <h3>ガスト</h3>
-        <p>ホールスタッフとして接客・レジ業務などを担当。お客様対応やチームワークを重視した業務でサービス力を培う。</p>
+      <div class="skills-grid">
+        <article class="ingredient">
+          <header>
+            <span class="ing-no">一</span>
+            <h3>Frontend</h3>
+            <span class="ing-en">front</span>
+          </header>
+          <ul>
+            <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+            <li>React</li><li>Next.js</li><li>SwiftUI</li>
+          </ul>
+          <p>UI をさっと組む場面から、Next.js の SSR、Swift の iOS アプリまで。</p>
+        </article>
+
+        <article class="ingredient">
+          <header>
+            <span class="ing-no">二</span>
+            <h3>Backend</h3>
+            <span class="ing-en">back</span>
+          </header>
+          <ul>
+            <li>Python</li><li>Flask</li><li>Ruby</li>
+            <li>PHP</li><li>SQLite</li><li>MySQL</li>
+          </ul>
+          <p>API 設計・DB 周り、LLM 組込までバックエンド全般。</p>
+        </article>
+
+        <article class="ingredient">
+          <header>
+            <span class="ing-no">三</span>
+            <h3>Data &amp; AI</h3>
+            <span class="ing-en">data</span>
+          </header>
+          <ul>
+            <li>OpenAI API</li><li>LLM Agents</li>
+            <li>Pandas</li><li>scikit-learn</li><li>Matplotlib</li>
+          </ul>
+          <p>LLM を組み込んだ Web アプリ、マッチング特徴量の設計など。</p>
+        </article>
+
+        <article class="ingredient">
+          <header>
+            <span class="ing-no">四</span>
+            <h3>Infra &amp; Tools</h3>
+            <span class="ing-en">infra</span>
+          </header>
+          <ul>
+            <li>Git / GitHub</li><li>Docker</li>
+            <li>AWS</li><li>GCP</li><li>Figma</li>
+          </ul>
+          <p>チーム開発の CI、コンテナ化、クラウドでの運用・検証。</p>
+        </article>
       </div>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date">2023/7 - 2024/1</span>
-      <div>
-        <h3>ラウンドワン</h3>
-        <p>アミューズメント施設スタッフとして、接客・フロア管理・イベント運営に従事。多様なニーズに応える柔軟な対応力を身につけた。</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date">2024/1 - 継続中</span>
-      <div>
-        <h3>創作料理azuki</h3>
-        <p>ホールスタッフとしてドリンク作成や接客業務を担当。円滑な店舗運営を意識し、ホスピタリティと協調性を磨いた。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- イベント参加歴セクション -->
-<section id="events" class="card gradient-bg">
-  <h2><i class="fa-solid fa-trophy"></i> ハッカソン・イベント参加歴</h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <span class="timeline-date"></span>
-      <div>
-        <h3>AI Agent Hackathon with Google Cloud</h3>
-        <p></p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date"></span>
-      <div>
-        <h3>Engineer Guild hackathon</h3>
-        <p></p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-date"></span>
-      <div>
-        <h3>技育CAMPハッカソン2025年度vol.1</h3>
-        <p></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-    <section id="projects" class="card">
-      <h2><i class="fa-solid fa-flask"></i> 研究・開発プロジェクト</h2>
-        <div class="projects-grid">
-          <div class="project-card" data-key="project1">
-            <img src="images/money.png" alt="プロジェクト1" class="project-thumb">
-            <div>
-              <h3>グループ内お金管理アプリ</h3>
-              <p>グループでのお金のやり取りを見える化し、記録・精算できるアプリ</p>
-              <span class="project-tags">Swift / SwiftUI / React / Ruby / AWS / Docker</Ruby></span>
-            </div>
-          </div>
-          <div class="project-card" data-key="project2">
-            <img src="images/lumina1.png" alt="プロジェクト2" class="project-thumb">
-            <div>
-              <h3>Lum!na</h3>
-              <p>新入生や在学生が、大学生活をより便利で快適に過ごせることを目指した学生向けコミュニティ支援Webサービス</p>
-              <span class="project-tags">HTML / CSS / JavaScript / Flask / SQLite</span>
-            </div>
-          </div>
-
-          <div class="project-card" data-key="project3">
-            <img src="images/hobit1.png" alt="プロジェクト3" class="project-thumb">
-            <div>
-              <h3>Hobit</h3>
-              <p>趣味でつながる新しいマッチングアプリ</p>
-              <span class="project-tags">Swift / SwiftUI / UIKit / SQLite3 / Python / OpenAI API</span>
-            </div>
-          </div>
-          <div class="project-card" data-key="project4">
-            <img src="images/aimLab.png" alt="プロジェクト4" class="project-thumb">
-            <div>
-              <h3>Rapid Clicks</h3>
-              <p>シンプル操作で誰でも楽しめる、実績やランキング機能も充実したモダンなクリックゲーム</p>
-              <span class="project-tags">HTML / CSS / JavaScrip / PHP / MySQL</span>
-            </div>
-          </div>
-          <div class="project-card" data-key="project5">
-            <img src="images/tyuusyoukigyou.png" alt="プロジェクトX" class="project-thumb">
-              <div>
-                <h3>ConnectBiz</h3>
-                <p>中小企業をつなぐビジネスアライアンスプラットフォーム</p>
-                <span class="project-tags">HTML / CSS / JavaScript</span>
-              </div>
-          </div>
-          <div class="project-card" data-key="project6">
-            <img src="images/スクリーンショット 2025-05-17 3.09.28.png" alt="プロジェクトY" class="project-thumb">
-              <div>
-                <h3>ResourceHub</h3>
-                <p>チームや個人のためのシンプルなリソース管理・可視化Webアプリ</p>
-                <span class="project-tags">HTML / CSS / JavaScript / SQLite</span>
-              </div>
-          
-          
-        </div>
-</section>
-
-
-    <section id="contact" class="card section-alt">
-      <h2><i class="fa-solid fa-envelope"></i> github</h2>
-      <p>GitHub: <a href="https://github.com/2322051" target="_blank">https://github.com/2322051</a></p>
     </section>
+
+    <!-- ========================= LOG ========================= -->
+    <section class="log" id="log">
+      <header class="section-head">
+        <span class="section-num">其の四</span>
+        <h2 class="section-title">
+          <span class="title-jp">活動ログ</span>
+          <span class="title-en">Log <em>&amp; events</em></span>
+        </h2>
+      </header>
+
+      <div class="log-grid">
+        <div class="log-col">
+          <h3 class="log-col-title">
+            <span class="col-mark" aria-hidden="true">◆</span>
+            ハッカソン &amp; イベント
+          </h3>
+          <ul class="log-list">
+            <li>
+              <span class="log-date">2025</span>
+              <div>
+                <span class="log-title">AI Agent Hackathon with Google Cloud</span>
+                <span class="log-tag">AI · LLM · GCP</span>
+              </div>
+            </li>
+            <li>
+              <span class="log-date">2025</span>
+              <div>
+                <span class="log-title">Engineer Guild Hackathon</span>
+                <span class="log-tag">Team · Web</span>
+              </div>
+            </li>
+            <li>
+              <span class="log-date">2025</span>
+              <div>
+                <span class="log-title">技育 CAMP ハッカソン 2025 vol.1</span>
+                <span class="log-tag">Student · Full-stack</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="log-col">
+          <h3 class="log-col-title">
+            <span class="col-mark" aria-hidden="true">◆</span>
+            アルバイト経歴
+          </h3>
+          <ul class="log-list">
+            <li>
+              <span class="log-date current">2024.01 — 継続中</span>
+              <div>
+                <span class="log-title">創作料理 azuki</span>
+                <span class="log-tag">ホール / ドリンク作成</span>
+              </div>
+            </li>
+            <li>
+              <span class="log-date">2023.07 — 2024.01</span>
+              <div>
+                <span class="log-title">ラウンドワン</span>
+                <span class="log-tag">フロア運営 / イベント</span>
+              </div>
+            </li>
+            <li>
+              <span class="log-date">2023.03 — 2023.08</span>
+              <div>
+                <span class="log-title">ガスト</span>
+                <span class="log-tag">接客 / レジ業務</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= CONTACT ========================= -->
+    <section class="contact" id="contact">
+      <header class="section-head">
+        <span class="section-num">其の五</span>
+        <h2 class="section-title">
+          <span class="title-jp">ご挨拶</span>
+          <span class="title-en">Say <em>hello</em></span>
+        </h2>
+      </header>
+
+      <div class="contact-grid">
+        <div class="contact-message">
+          <p class="contact-lead">
+            <span class="brush">お声がけ、お待ちしています。</span>
+          </p>
+          <p>
+            インターン・共同開発・ちょっとした相談、大歓迎です。<br />
+            気軽にメッセージを送ってください。<br />
+            お返事はお猪口を傾けてからでもよいですか？
+          </p>
+        </div>
+
+        <ul class="contact-list">
+          <li>
+            <a href="https://github.com/2322051" target="_blank" rel="noopener">
+              <span class="ck">GitHub</span>
+              <span class="cv">@2322051</span>
+              <span class="ca" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:s2322051@stu.musashino-u.ac.jp">
+              <span class="ck">Email</span>
+              <span class="cv">s2322051@stu.musashino-u.ac.jp</span>
+              <span class="ca" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li class="ci">
+            <span class="ck">大学</span>
+            <span class="cv">武蔵野大学 データサイエンス学部</span>
+            <span class="ca" aria-hidden="true">·</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
-  <div id="project-modal" class="modal">
-    <div class="modal-content animate-modal">
-      <span class="close" id="close-modal">&times;</span>
-      <h2 id="modal-title"></h2>
-      <img id="modal-img" src="" alt="" class="modal-thumb">
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="foot-l">
+        <svg class="foot-cup" viewBox="0 0 80 60" aria-hidden="true">
+          <ellipse cx="40" cy="14" rx="30" ry="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M10 14 L20 50 Q40 58 60 50 L70 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        </svg>
+        <span>© 2026 長谷川 拓音 / Takuto Hasegawa</span>
+      </div>
+      <span class="foot-c">お付き合いありがとうございました。</span>
+      <a class="foot-r" href="#top">上へ戻る ↑</a>
+    </div>
+  </footer>
+
+  <!-- Project detail modal -->
+  <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-panel">
+      <button class="modal-close" id="close-modal" aria-label="閉じる">×</button>
+      <span class="modal-eyebrow" id="modal-eyebrow">— No. 00</span>
+      <h3 class="modal-title" id="modal-title"></h3>
+      <img id="modal-img" src="" alt="" class="modal-img" />
       <p id="modal-description"></p>
-      <a id="modal-link" href="#" target="_blank" class="modal-link"></a>
+      <p class="modal-stack" id="modal-stack"></p>
     </div>
   </div>
 
-  <footer>
-    <p>&copy; 2025 長谷川拓音 | Portfolio</p>
-  </footer>
   <script src="script.js"></script>
 </body>
 </html>
-
